@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "Medellín Invest",
+    "slug": "medellin-invest-mvp",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "medellininvest",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.medellininvest.mvp"
+    },
+    "android": {
+      "package": "com.medellininvest.mvp",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1B2B"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
