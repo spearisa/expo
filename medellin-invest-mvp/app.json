@@ -24,7 +24,8 @@
     },
     "plugins": ["expo-router"],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/gh/spearisa/expo@claude%2Freact-native-mvp-ui-FHLAn/medellin-invest-mvp/dist"
     },
     "runtimeVersion": {
       "policy": "appVersion"
