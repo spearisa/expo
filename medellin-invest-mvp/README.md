@@ -83,17 +83,33 @@ theme/                     colors, spacing, typography
 
 ## Getting started
 
+### Fastest: test on your phone via Expo Go (no Apple account needed)
+
+1. Install **Expo Go** from the [App Store](https://apps.apple.com/app/expo-go/id982107779)
+   or [Play Store](https://play.google.com/store/apps/details?id=host.exp.exponent).
+2. From this folder:
+   ```bash
+   cd medellin-invest-mvp
+   npm install
+   npx expo start
+   ```
+3. Scan the QR code printed in the terminal with Expo Go (Android) or the
+   Camera app (iOS). The app boots in seconds — every screen, the ROI
+   calculator, and the multi-step listing flow are demoable end-to-end.
+
+> **Why no Apple account?** Expo Go is a host app already on the App Store.
+> Your JS bundle runs inside it, so you skip provisioning, signing, and
+> TestFlight entirely. All deps in this MVP are Expo Go-compatible.
+
+### Other run targets
+
 ```bash
-cd medellin-invest-mvp
-npm install     # or pnpm / yarn
-npm run start   # opens Expo dev tools
+npx expo start
+# then press:
+#   i — iOS simulator (requires Xcode)
+#   a — Android emulator (requires Android Studio)
+#   w — web preview in the browser
 ```
-
-Then press:
-
-- `i` to launch the iOS simulator
-- `a` to launch the Android emulator
-- `w` to open the web preview
 
 ### Type-checking
 
