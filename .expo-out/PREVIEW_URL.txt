@@ -1,1 +1,1 @@
-https://expo.dev/preview/update?message=Expo%20Go%20preview%2022%3A46&updateRuntimeVersion=exposdk%3A54.0.0&createdAt=2026-04-16T22%3A48%3A40.136Z&slug=medellin-invest-mvp&projectId=19b77835-d560-42fb-9661-d26c4a44f808&group=b9385756-6970-4481-89a2-0cc4a12f663f
+https://expo.dev/preview/update?message=Expo%20Go%20preview%2023%3A07&updateRuntimeVersion=exposdk%3A54.0.0&createdAt=2026-04-16T23%3A09%3A20.883Z&slug=medellin-invest-mvp&projectId=19b77835-d560-42fb-9661-d26c4a44f808&group=4760d307-d225-4c30-b806-ea7d57cff593
