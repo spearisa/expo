@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v6 SDK 54)
+name: Medellín — Auto Publish to Expo Go (v7 SDK 54 metro fix)
 
 on:
   workflow_dispatch:
