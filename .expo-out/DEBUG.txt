@@ -55,6 +55,7 @@
 [expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
 [expo-cli] > npm install
 [expo-cli] added 9 packages, removed 274 packages, and audited 1226 packages in 6s
+[expo-cli] 
 [expo-cli] 160 packages are looking for funding
 [expo-cli]   run `npm fund` for details
 [expo-cli] 18 vulnerabilities (1 low, 17 high)
@@ -103,7 +104,7 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] Starting Metro Bundler
 [expo-cli] 
-[expo-cli] iOS Bundling failed 25409ms node_modules/expo-router/entry.js (1247 modules)
+[expo-cli] iOS Bundling failed 23292ms node_modules/expo-router/entry.js (1244 modules)
 [expo-cli] Error: Unable to resolve module @react-native/virtualized-lists from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native/Libraries/Lists/FlatList.js: @react-native/virtualized-lists could not be found within the project or in these directories:
 [expo-cli]   node_modules
 [expo-cli] [0m [90m 23 |[39m   [33mVirtualizedList[39m[33m,[39m
