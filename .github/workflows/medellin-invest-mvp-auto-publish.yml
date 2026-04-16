@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v8 splash + index redirect)
+name: Medellín — Auto Publish to Expo Go (v9 worklets + error boundary)
 
 on:
   workflow_dispatch:
