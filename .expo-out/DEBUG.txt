@@ -84,28 +84,28 @@ Require stack:
 === out.json ===
 [
   {
-    "id": "019d97fa-1dd9-7346-adc7-d8571ff01c12",
-    "createdAt": "2026-04-16T20:27:24.505Z",
-    "group": "0d974d1b-b8ce-43eb-b39f-c27860960034",
+    "id": "019d9807-4842-7c9e-b0bb-efbb1039e334",
+    "createdAt": "2026-04-16T20:41:47.330Z",
+    "group": "618f7eac-95bf-4b63-9a74-4016b0230575",
     "branch": "preview",
-    "message": "Expo Go preview 20:26",
+    "message": "Expo Go preview 20:40",
     "runtimeVersion": "exposdk:51.0.0",
     "platform": "android",
-    "manifestPermalink": "https://u.expo.dev/update/019d97fa-1dd9-7346-adc7-d8571ff01c12",
+    "manifestPermalink": "https://u.expo.dev/update/019d9807-4842-7c9e-b0bb-efbb1039e334",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "72e2e6812b5987a2563ff2365614ba44a4268c5f"
+    "gitCommitHash": "6092e042627d9e6841f5ddc632250f86369b7b92"
   },
   {
-    "id": "019d97fa-1dd9-7b54-9a1b-8cad11c2fecf",
-    "createdAt": "2026-04-16T20:27:24.505Z",
-    "group": "0d974d1b-b8ce-43eb-b39f-c27860960034",
+    "id": "019d9807-4842-789e-b0fb-ef31a2210338",
+    "createdAt": "2026-04-16T20:41:47.330Z",
+    "group": "618f7eac-95bf-4b63-9a74-4016b0230575",
     "branch": "preview",
-    "message": "Expo Go preview 20:26",
+    "message": "Expo Go preview 20:40",
     "runtimeVersion": "exposdk:51.0.0",
     "platform": "ios",
-    "manifestPermalink": "https://u.expo.dev/update/019d97fa-1dd9-7b54-9a1b-8cad11c2fecf",
+    "manifestPermalink": "https://u.expo.dev/update/019d9807-4842-789e-b0fb-ef31a2210338",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "72e2e6812b5987a2563ff2365614ba44a4268c5f"
+    "gitCommitHash": "6092e042627d9e6841f5ddc632250f86369b7b92"
   }
 ]
 
@@ -127,8 +127,9 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] Starting Metro Bundler
 [expo-cli] 
-[expo-cli] Android Bundled 30361ms node_modules/expo-router/entry.js (1276 modules)
-[expo-cli] iOS Bundled 33646ms node_modules/expo-router/entry.js (1278 modules)
+[expo-cli] Android Bundled 28855ms node_modules/expo-router/entry.js (1276 modules)
+[expo-cli] 
+[expo-cli] iOS Bundled 32635ms node_modules/expo-router/entry.js (1278 modules)
 [expo-cli] Creating asset map
 [expo-cli] Preparing additional debugging files
 [expo-cli] 
@@ -136,6 +137,7 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] Exporting 34 assets:
 [expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (70.3 kB)
+[expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66.2 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13.5 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56.2 kB)
@@ -151,6 +153,7 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (443 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf (1.15 MB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialIcons.ttf (357 kB)
+[expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Octicons.ttf (49.4 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/SimpleLineIcons.ttf (54.1 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Zocial.ttf (25.8 kB)
@@ -163,7 +166,6 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] 
 [expo-cli] Exporting 2 bundles for android:
 [expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc (2.37 MB)
-[expo-cli] 
 [expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc.map (7.13 MB)
 [expo-cli] 
 [expo-cli] 
