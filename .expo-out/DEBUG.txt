@@ -75,6 +75,32 @@ Require stack:
     Error: update:configure command failed.
 
 === out.json ===
+[
+  {
+    "id": "019d986f-1e49-736d-b629-fe9be1d59bd9",
+    "createdAt": "2026-04-16T22:35:12.329Z",
+    "group": "3ad82730-aa82-49ff-a018-6b01f6f37294",
+    "branch": "preview",
+    "message": "Expo Go preview 22:33",
+    "runtimeVersion": "exposdk:54.0.0",
+    "platform": "android",
+    "manifestPermalink": "https://u.expo.dev/update/019d986f-1e49-736d-b629-fe9be1d59bd9",
+    "isRollBackToEmbedded": false,
+    "gitCommitHash": "cd1a551509c1da249832084c63bf2d8f087e79c4"
+  },
+  {
+    "id": "019d986f-1e49-7ae4-aa18-860bb9c6f6f3",
+    "createdAt": "2026-04-16T22:35:12.329Z",
+    "group": "3ad82730-aa82-49ff-a018-6b01f6f37294",
+    "branch": "preview",
+    "message": "Expo Go preview 22:33",
+    "runtimeVersion": "exposdk:54.0.0",
+    "platform": "ios",
+    "manifestPermalink": "https://u.expo.dev/update/019d986f-1e49-7ae4-aa18-860bb9c6f6f3",
+    "isRollBackToEmbedded": false,
+    "gitCommitHash": "cd1a551509c1da249832084c63bf2d8f087e79c4"
+  }
+]
 
 === err.log ===
 npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
@@ -94,72 +120,99 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] --non-interactive is not supported, use $CI=1 instead
 [expo-cli] Starting Metro Bundler
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 17.9% ( 42/189)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 14.8% ( 17/125)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 34.0% (262/449)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.7% (179/353)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 50.4% (438/617)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 46.6% (413/605)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 65.6% (619/764)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.1% (579/753)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 71.3% (822/985)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 70.7% (755/898)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.7% (1057/1092)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 87.6% ( 979/1046)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.5% (1216/1301)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.6% (1167/1253)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.5% (1321/1399)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.6% (1299/1395)
-[expo-cli] iOS Bundling failed 29776ms node_modules/expo-router/entry.js (1496 modules)
-[expo-cli] Error: Unable to resolve module semver/functions/satisfies from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native-reanimated/scripts/validate-worklets-version.js: semver/functions/satisfies could not be found within the project or in these directories:
-[expo-cli]   node_modules
-[expo-cli] [0m [90m 1 |[39m [32m'use strict'[39m[33m;[39m
-[expo-cli]  [90m 2 |[39m
-[expo-cli] [31m[1m>[22m[39m[90m 3 |[39m [36mconst[39m semverSatisfies [33m=[39m require([32m'semver/functions/satisfies'[39m)[33m;[39m
-[expo-cli]  [90m   |[39m                                  [31m[1m^[22m[39m
-[expo-cli]  [90m 4 |[39m [36mconst[39m semverPrerelease [33m=[39m require([32m'semver/functions/prerelease'[39m)[33m;[39m
-[expo-cli]  [90m 5 |[39m [36mconst[39m expectedVersion [33m=[39m require([32m'./worklets-version.json'[39m)[33m;[39m
-[expo-cli]  [90m 6 |[39m [36mconst[39m compatibilityFile [33m=[39m require([32m'../compatibility.json'[39m)[33m;[39m[0m
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 18.4% ( 43/190)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 17.4% ( 13/115)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 34.5% (267/455)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 31.1% (184/330)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 54.0% (457/622)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.4% (442/605)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 66.1% (621/764)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 57.8% (567/746)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 71.6% (821/985)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 72.1% (766/902)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.5% (1058/1094)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.1% (1033/1088)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.3% (1221/1322)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.8% (1169/1254)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.3% (1323/1401)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.8% (1300/1397)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1521/1521)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1518/1518)
+[expo-cli] iOS Bundled 35504ms node_modules/expo-router/entry.js (1521 modules)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1521/1521)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1518/1518)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1518/1518)
+[expo-cli] Android Bundled 39531ms node_modules/expo-router/entry.js (1518 modules)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1518/1518)
+[expo-cli] Creating asset map
+[expo-cli] Static rendering is enabled. Learn more: https://docs.expo.dev/router/reference/static-rendering/
+[expo-cli] Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+[expo-cli] λ node_modules/expo-router/node/render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 19.4% ( 74/180)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 13.7% ( 28/168)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.1% (175/304)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓░░░░░░░░░░░░░ 22.6% (186/391)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 35.3% (258/434)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓░░░░░░░░░░ 40.7% (352/571)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 44.1% (329/531)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓░░░░░░░░░ 45.7% (413/611)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 51.9% (435/604)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.8% (547/710)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 70.0% (626/748)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 81.5% (751/832)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 88.9% (826/876)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.4% (886/945)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.6% ( 934/1026)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.4% ( 999/1076)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.6% (1056/1146)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.1% (1140/1175)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.2% (1231/1253)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.8% (1247/1271)
+[expo-cli] λ Bundled 35928ms node_modules/expo-router/node/render.js (1302 modules)
+[expo-cli] Web Bundled 36509ms node_modules/expo-router/entry.js (1292 modules)
+[expo-cli] › ios bundles (2):
+[expo-cli] _expo/static/js/ios/entry-f57bc7cc4575316ee133522b3e7e0e80.hbc (2.99 MB)
+[expo-cli] _expo/static/js/ios/entry-f57bc7cc4575316ee133522b3e7e0e80.hbc.map (8.63 MB)
 [expo-cli] 
-[expo-cli] Import stack:
+[expo-cli] › android bundles (2):
+[expo-cli] _expo/static/js/android/entry-94bfcb33930be79432d85b8cde5d223c.hbc (2.99 MB)
+[expo-cli] _expo/static/js/android/entry-94bfcb33930be79432d85b8cde5d223c.hbc.map (8.63 MB)
 [expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/scripts/validate-worklets-version.js
-[expo-cli]  | import "semver/functions/satisfies"
+[expo-cli] › web bundles (2):
+[expo-cli] _expo/static/js/web/entry-01ca7f666c106b15bc3590479e2f2b03.js (2.68 MB)
+[expo-cli] _expo/static/js/web/entry-01ca7f666c106b15bc3590479e2f2b03.js.map (7.81 MB)
 [expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/src/platform-specific/workletsVersion.ts
-[expo-cli]  | import "react-native-reanimated/scripts/validate-worklets-version"
+[expo-cli] › Static routes (20):
+[expo-cli] /map (32.5 kB)
+[expo-cli] / (index) (34.4 kB)
+[expo-cli] /explore (33.5 kB)
+[expo-cli] /profile (40.2 kB)
+[expo-cli] /_sitemap (23.3 kB)
+[expo-cli] /favorites (40.6 kB)
+[expo-cli] /+not-found (23.3 kB)
+[expo-cli] /(tabs)/map (32.5 kB)
+[expo-cli] /auth/login (29.1 kB)
+[expo-cli] /auth/signup (28.8 kB)
+[expo-cli] /(tabs) (34.4 kB)
+[expo-cli] /listings/edit (36.9 kB)
+[expo-cli] /property/[id] (24.6 kB)
+[expo-cli] /(tabs)/explore (33.5 kB)
+[expo-cli] /(tabs)/profile (40.2 kB)
+[expo-cli] /dashboard/buyer (26.6 kB)
+[expo-cli] /listings/create (31.4 kB)
+[expo-cli] /(tabs)/favorites (40.6 kB)
+[expo-cli] /dashboard/broker (26.9 kB)
+[expo-cli] /auth/forgot-password (25.8 kB)
 [expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/NativeReanimated.ts
-[expo-cli]  | import "../platform-specific/workletsVersion"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/reanimatedModuleInstance.ts
-[expo-cli]  | import "./NativeReanimated"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/index.ts
-[expo-cli]  | import "./reanimatedModuleInstance"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-reanimated/src/index.ts
-[expo-cli]  | import "./ReanimatedModule"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/reanimatedWrapper.ts
-[expo-cli]  | import "react-native-reanimated"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/utils.ts
-[expo-cli]  | import "../reanimatedWrapper"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/index.tsx
-[expo-cli]  | import "./utils"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-gesture-handler/src/components/Text.tsx
-[expo-cli]  | import "../handlers/gestures/GestureDetector"
-[expo-cli] 
-[expo-cli]  node_modules/react-native-gesture-handler/src/index.ts
-[expo-cli]  | import "./components/Text"
-[expo-cli] 
-[expo-cli]  app/_layout.tsx
-[expo-cli]  | import "react-native-gesture-handler"
-[expo-cli] 
-[expo-cli]  app (require.context)
-✖ Export failed
-/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/expo/bin/cli export --output-dir dist --experimental-bundle --non-interactive --dump-sourcemap --dump-assetmap --platform=all exited with non-zero code: 1
-    Error: update command failed.
+[expo-cli] Exported: dist
+✔ Exported bundle(s)
+- Uploading...
+- Uploading assetmap.json (0 / 21.9 KB)
+✔ Uploaded assetmap.json 
+✔ Uploaded 2 app bundles
+✔ Uploading assets skipped - no new assets found
+ℹ 46 iOS assets, 46 Android assets (maximum: 2000 total per update). Learn more about asset limits: https://expo.fyi/eas-update-asset-limits
+- Computing project fingerprints
+✔ Computed project fingerprints
+- Publishing...
+✔ Published!
