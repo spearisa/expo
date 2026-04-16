@@ -29,9 +29,7 @@
     "experiments": {
       "typedRoutes": true
     },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
+    "runtimeVersion": "exposdk:51.0.0",
     "extra": {
       "router": {
         "origin": false
@@ -49,7 +47,7 @@
 === init.log ===
 ✔ Project successfully linked (ID: 19b77835-d560-42fb-9661-d26c4a44f808) (modified app.json)
 
-=== update:configure log ===
+=== conf.log ===
 💡 The following process will configure your project to use EAS Update. These changes only apply to your local project files and you can safely revert them at any time.
 > npx expo install expo-updates
 [expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
@@ -83,35 +81,35 @@ Require stack:
 - /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/bin/run
     Error: update:configure command failed.
 
-=== update stdout (out.json) ===
+=== out.json ===
 [
   {
-    "id": "019d97ee-c6dc-7f6c-b76c-f6828c3c1482",
-    "createdAt": "2026-04-16T20:15:01.340Z",
-    "group": "e20a4400-7afd-40cc-a9b2-88e95f33106e",
+    "id": "019d97fa-1dd9-7346-adc7-d8571ff01c12",
+    "createdAt": "2026-04-16T20:27:24.505Z",
+    "group": "0d974d1b-b8ce-43eb-b39f-c27860960034",
     "branch": "preview",
-    "message": "Auto CI publish",
-    "runtimeVersion": "0.1.0",
+    "message": "Expo Go preview 20:26",
+    "runtimeVersion": "exposdk:51.0.0",
     "platform": "android",
-    "manifestPermalink": "https://u.expo.dev/update/019d97ee-c6dc-7f6c-b76c-f6828c3c1482",
+    "manifestPermalink": "https://u.expo.dev/update/019d97fa-1dd9-7346-adc7-d8571ff01c12",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "104d786f106cc4c4d11010df0ac182f82085787e"
+    "gitCommitHash": "72e2e6812b5987a2563ff2365614ba44a4268c5f"
   },
   {
-    "id": "019d97ee-c6dc-7ffa-b626-1b0f1e8bdbe6",
-    "createdAt": "2026-04-16T20:15:01.340Z",
-    "group": "e20a4400-7afd-40cc-a9b2-88e95f33106e",
+    "id": "019d97fa-1dd9-7b54-9a1b-8cad11c2fecf",
+    "createdAt": "2026-04-16T20:27:24.505Z",
+    "group": "0d974d1b-b8ce-43eb-b39f-c27860960034",
     "branch": "preview",
-    "message": "Auto CI publish",
-    "runtimeVersion": "0.1.0",
+    "message": "Expo Go preview 20:26",
+    "runtimeVersion": "exposdk:51.0.0",
     "platform": "ios",
-    "manifestPermalink": "https://u.expo.dev/update/019d97ee-c6dc-7ffa-b626-1b0f1e8bdbe6",
+    "manifestPermalink": "https://u.expo.dev/update/019d97fa-1dd9-7b54-9a1b-8cad11c2fecf",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "104d786f106cc4c4d11010df0ac182f82085787e"
+    "gitCommitHash": "72e2e6812b5987a2563ff2365614ba44a4268c5f"
   }
 ]
 
-=== update stderr (err.log) ===
+=== err.log ===
 npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
@@ -129,8 +127,8 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] Starting Metro Bundler
 [expo-cli] 
-[expo-cli] iOS Bundled 29921ms node_modules/expo-router/entry.js (1266 modules)
-[expo-cli] Android Bundled 33334ms node_modules/expo-router/entry.js (1276 modules)
+[expo-cli] Android Bundled 30361ms node_modules/expo-router/entry.js (1276 modules)
+[expo-cli] iOS Bundled 33646ms node_modules/expo-router/entry.js (1278 modules)
 [expo-cli] Creating asset map
 [expo-cli] Preparing additional debugging files
 [expo-cli] 
@@ -138,11 +136,8 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] Exporting 34 assets:
 [expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (70.3 kB)
-[expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66.2 kB)
-[expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13.5 kB)
-[expo-cli] 
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56.2 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf (166 kB)
 [expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf (134 kB)
@@ -166,14 +161,17 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] node_modules/expo-router/assets/forward.png (250 B)
 [expo-cli] node_modules/expo-router/assets/pkg.png (429 B)
 [expo-cli] 
+[expo-cli] Exporting 2 bundles for android:
+[expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc (2.37 MB)
+[expo-cli] 
+[expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc.map (7.13 MB)
+[expo-cli] 
+[expo-cli] 
 [expo-cli] Exporting 2 bundles for ios:
 [expo-cli] 
-[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc (2.37 MB)
+[expo-cli] _expo/static/js/ios/entry-f54e5d129d5a71eb4e5cc415e449de22.hbc (2.37 MB)
 [expo-cli] 
-[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc.map (7.13 MB)
-[expo-cli] Exporting 2 bundles for android:
-[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc (2.37 MB)
-[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc.map (7.13 MB)
+[expo-cli] _expo/static/js/ios/entry-f54e5d129d5a71eb4e5cc415e449de22.hbc.map (7.13 MB)
 [expo-cli] Exporting 3 files:
 [expo-cli] assetmap.json (16.6 kB)
 [expo-cli] debug.html (390 B)

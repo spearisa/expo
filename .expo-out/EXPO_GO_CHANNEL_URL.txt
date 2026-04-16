@@ -1,0 +1,1 @@
+exp://u.expo.dev/?channel-name=preview&runtime-version=exposdk%3A51.0.0
