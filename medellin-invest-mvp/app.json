@@ -24,14 +24,7 @@
     },
     "plugins": ["expo-router"],
     "experiments": {
-      "typedRoutes": true,
-      "baseUrl": "/gh/spearisa/expo@preview/medellin-invest-mvp/dist"
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/REPLACE_WITH_PROJECT_ID_FROM_EAS_INIT"
+      "typedRoutes": true
     }
   }
 }
