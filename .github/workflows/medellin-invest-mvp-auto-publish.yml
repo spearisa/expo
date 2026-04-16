@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v4)
+name: Medellín — Auto Publish to Expo Go (v5)
 
 on:
   workflow_dispatch:
@@ -58,6 +58,18 @@ jobs:
         run: |
           npx eas-cli init --non-interactive --force 2>&1 | tee /tmp/init.log
           npx eas-cli update:configure --non-interactive --platform all 2>&1 | tee /tmp/conf.log
+
+      - name: Set project to PUBLIC visibility
+        continue-on-error: true
+        run: |
+          # Get project id from app.json (set by eas init)
+          PROJECT_ID=$(node -e "console.log(require('./app.json').expo.extra.eas.projectId || '')")
+          echo "Project ID: $PROJECT_ID"
+          curl -sS -X POST https://api.expo.dev/graphql \
+            -H "Authorization: Bearer $EXPO_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d "{\"query\":\"mutation SetAppPrivacy(\$appId: ID!) { app { setPrivacy(appId: \$appId, privacy: \\\"PUBLIC\\\") { id privacy } } }\",\"variables\":{\"appId\":\"$PROJECT_ID\"}}" \
+            | tee /tmp/privacy.json
 
       - name: Publish update for Expo Go
         continue-on-error: true
