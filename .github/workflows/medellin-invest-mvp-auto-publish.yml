@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v6)
+name: Medellín — Auto Publish to Expo Go (v5)
 
 on:
   workflow_dispatch:
@@ -35,17 +35,13 @@ jobs:
           // Strip placeholder updates.url so eas update:configure sets it fresh
           if (j.expo.updates && typeof j.expo.updates.url === 'string' && j.expo.updates.url.includes('REPLACE_WITH_PROJECT_ID')) delete j.expo.updates;
           // Expo Go only loads updates whose runtime matches the SDK version
-          j.expo.runtimeVersion = 'exposdk:54.0.0';
+          j.expo.runtimeVersion = 'exposdk:51.0.0';
           fs.writeFileSync(p, JSON.stringify(j,null,2)+'\n');
           console.log(JSON.stringify(j.expo,null,2));
           "
 
       - name: Install dependencies
-        run: npm install --ignore-scripts --no-audit --no-fund --force
-
-      - name: Align deps to SDK 54
-        continue-on-error: true
-        run: npx expo install --check --fix --non-interactive 2>&1 | tee /tmp/expoinstall.log
+        run: npm install --ignore-scripts --no-audit --no-fund
 
       - name: Install eas-cli
         run: npm install --no-save --no-audit --no-fund eas-cli@latest
@@ -98,7 +94,7 @@ jobs:
             const updateId = first.id || '';
             const projectId = first.projectId || first.updateProjectId || '';
             const slug = 'medellin-invest-mvp';
-            const runtime = first.runtimeVersion || 'exposdk:54.0.0';
+            const runtime = first.runtimeVersion || 'exposdk:51.0.0';
             const message = encodeURIComponent(first.message || '');
             const createdAt = first.createdAt ? encodeURIComponent(first.createdAt) : '';
             const channel = 'preview';
