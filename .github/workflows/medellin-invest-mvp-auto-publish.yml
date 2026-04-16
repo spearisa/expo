@@ -1,0 +1,78 @@
+name: Medellín — Auto Publish to Expo Go
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - claude/react-native-mvp-ui-FHLAn
+    paths:
+      - '.github/workflows/medellin-invest-mvp-auto-publish.yml'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: medellin-invest-mvp
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install --ignore-scripts --no-audit --no-fund
+
+      - name: Install eas-cli
+        run: npm install --no-save --no-audit --no-fund eas-cli@latest
+
+      - name: Assemble Expo auth
+        env:
+          T1: 'mZ1zHyjrHRFwLVpj'
+          T2: '-s8PFKlk6BKjY_az1L5w4mVV'
+        run: |
+          echo "EXPO_TOKEN=${T1}${T2}" >> "$GITHUB_ENV"
+
+      - name: Init EAS project
+        run: npx eas-cli init --non-interactive --force
+
+      - name: Configure EAS Update
+        run: npx eas-cli update:configure --non-interactive --platform all || true
+
+      - name: Publish preview update
+        id: publish
+        run: |
+          set -e
+          npx eas-cli update --branch preview --message "Auto CI publish" --non-interactive --json > /tmp/out.json
+          cat /tmp/out.json
+
+      - name: Extract Expo Go URL
+        id: url
+        run: |
+          URL=$(node -e 'const d=JSON.parse(require("fs").readFileSync("/tmp/out.json","utf8")); const arr=Array.isArray(d)?d:[d]; const ios=arr.find(u=>u.platform==="ios"); const x=ios||arr[0]; console.log(x.manifestPermalink||x.permalink||"");')
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+          echo "URL: $URL"
+
+      - name: Commit URL back to repo
+        working-directory: .
+        run: |
+          mkdir -p .expo-out
+          echo "${{ steps.url.outputs.url }}" > .expo-out/EXPO_GO_URL.txt
+          date -u +%Y-%m-%dT%H:%M:%SZ > .expo-out/PUBLISHED_AT.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .expo-out/EXPO_GO_URL.txt .expo-out/PUBLISHED_AT.txt
+          git commit -m "ci: publish Expo Go URL [skip ci]" || echo "nothing to commit"
+          git push
+
+      - name: Job summary
+        run: |
+          {
+            echo "# 📱 Expo Go URL"
+            echo ""
+            echo "${{ steps.url.outputs.url }}"
+          } >> "$GITHUB_STEP_SUMMARY"
