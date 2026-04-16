@@ -55,7 +55,6 @@
 [expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
 [expo-cli] > npm install
 [expo-cli] added 9 packages, removed 274 packages, and audited 1226 packages in 6s
-[expo-cli] 
 [expo-cli] 160 packages are looking for funding
 [expo-cli]   run `npm fund` for details
 [expo-cli] 18 vulnerabilities (1 low, 17 high)
@@ -85,6 +84,32 @@ Require stack:
     Error: update:configure command failed.
 
 === update stdout (out.json) ===
+[
+  {
+    "id": "019d97ee-c6dc-7f6c-b76c-f6828c3c1482",
+    "createdAt": "2026-04-16T20:15:01.340Z",
+    "group": "e20a4400-7afd-40cc-a9b2-88e95f33106e",
+    "branch": "preview",
+    "message": "Auto CI publish",
+    "runtimeVersion": "0.1.0",
+    "platform": "android",
+    "manifestPermalink": "https://u.expo.dev/update/019d97ee-c6dc-7f6c-b76c-f6828c3c1482",
+    "isRollBackToEmbedded": false,
+    "gitCommitHash": "104d786f106cc4c4d11010df0ac182f82085787e"
+  },
+  {
+    "id": "019d97ee-c6dc-7ffa-b626-1b0f1e8bdbe6",
+    "createdAt": "2026-04-16T20:15:01.340Z",
+    "group": "e20a4400-7afd-40cc-a9b2-88e95f33106e",
+    "branch": "preview",
+    "message": "Auto CI publish",
+    "runtimeVersion": "0.1.0",
+    "platform": "ios",
+    "manifestPermalink": "https://u.expo.dev/update/019d97ee-c6dc-7ffa-b626-1b0f1e8bdbe6",
+    "isRollBackToEmbedded": false,
+    "gitCommitHash": "104d786f106cc4c4d11010df0ac182f82085787e"
+  }
+]
 
 === update stderr (err.log) ===
 npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
@@ -104,35 +129,63 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] Starting Metro Bundler
 [expo-cli] 
-[expo-cli] iOS Bundling failed 23292ms node_modules/expo-router/entry.js (1244 modules)
-[expo-cli] Error: Unable to resolve module @react-native/virtualized-lists from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native/Libraries/Lists/FlatList.js: @react-native/virtualized-lists could not be found within the project or in these directories:
-[expo-cli]   node_modules
-[expo-cli] [0m [90m 23 |[39m   [33mVirtualizedList[39m[33m,[39m
-[expo-cli]  [90m 24 |[39m   keyExtractor [36mas[39m defaultKeyExtractor[33m,[39m
-[expo-cli] [31m[1m>[22m[39m[90m 25 |[39m } [36mfrom[39m [32m'@react-native/virtualized-lists'[39m[33m;[39m
-[expo-cli]  [90m    |[39m         [31m[1m^[22m[39m
-[expo-cli]  [90m 26 |[39m [36mimport[39m memoizeOne [36mfrom[39m [32m'memoize-one'[39m[33m;[39m
-[expo-cli]  [90m 27 |[39m
-[expo-cli]  [90m 28 |[39m [36mconst[39m [33mView[39m [33m=[39m require([32m'../Components/View/View'[39m)[33m;[39m[0m
-[expo-cli] Error: Unable to resolve module @react-native/virtualized-lists from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native/Libraries/Lists/FlatList.js: @react-native/virtualized-lists could not be found within the project or in these directories:
-[expo-cli]   node_modules
-[expo-cli] [0m [90m 23 |[39m   [33mVirtualizedList[39m[33m,[39m
-[expo-cli]  [90m 24 |[39m   keyExtractor [36mas[39m defaultKeyExtractor[33m,[39m
-[expo-cli] [31m[1m>[22m[39m[90m 25 |[39m } [36mfrom[39m [32m'@react-native/virtualized-lists'[39m[33m;[39m
-[expo-cli]  [90m    |[39m         [31m[1m^[22m[39m
-[expo-cli]  [90m 26 |[39m [36mimport[39m memoizeOne [36mfrom[39m [32m'memoize-one'[39m[33m;[39m
-[expo-cli]  [90m 27 |[39m
-[expo-cli]  [90m 28 |[39m [36mconst[39m [33mView[39m [33m=[39m require([32m'../Components/View/View'[39m)[33m;[39m[0m
-[expo-cli]     at ModuleResolver.resolveDependency (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:139:15)
-[expo-cli]     at DependencyGraph.resolveDependency (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/node-haste/DependencyGraph.js:232:43)
-[expo-cli]     at /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/lib/transformHelpers.js:156:21
-[expo-cli]     at resolveDependencies (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:42:25)
-[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:83:30)
-[expo-cli]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
-[expo-cli]     at async Promise.all (index 7)
-[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)
-[expo-cli]     at async Promise.all (index 4)
-[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)
-✖ Export failed
-/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/expo/bin/cli export --output-dir dist --source-maps --dump-assetmap --platform ios --platform android exited with non-zero code: 1
-    Error: update command failed.
+[expo-cli] iOS Bundled 29921ms node_modules/expo-router/entry.js (1266 modules)
+[expo-cli] Android Bundled 33334ms node_modules/expo-router/entry.js (1276 modules)
+[expo-cli] Creating asset map
+[expo-cli] Preparing additional debugging files
+[expo-cli] 
+[expo-cli] 
+[expo-cli] Exporting 34 assets:
+[expo-cli] 
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (70.3 kB)
+[expo-cli] 
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66.2 kB)
+[expo-cli] 
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13.5 kB)
+[expo-cli] 
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56.2 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf (166 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf (134 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf (33.7 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf (203 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf (209 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf (68 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf (424 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Fontisto.ttf (314 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Foundation.ttf (57 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (443 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf (1.15 MB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialIcons.ttf (357 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Octicons.ttf (49.4 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/SimpleLineIcons.ttf (54.1 kB)
+[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Zocial.ttf (25.8 kB)
+[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon-mask.png (913 B)
+[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon.png (10 variations | 338 B)
+[expo-cli] node_modules/expo-router/assets/error.png (516 B)
+[expo-cli] node_modules/expo-router/assets/file.png (158 B)
+[expo-cli] node_modules/expo-router/assets/forward.png (250 B)
+[expo-cli] node_modules/expo-router/assets/pkg.png (429 B)
+[expo-cli] 
+[expo-cli] Exporting 2 bundles for ios:
+[expo-cli] 
+[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc (2.37 MB)
+[expo-cli] 
+[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc.map (7.13 MB)
+[expo-cli] Exporting 2 bundles for android:
+[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc (2.37 MB)
+[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc.map (7.13 MB)
+[expo-cli] Exporting 3 files:
+[expo-cli] assetmap.json (16.6 kB)
+[expo-cli] debug.html (390 B)
+[expo-cli] metadata.json (3.9 kB)
+[expo-cli] 
+[expo-cli] App exported to: dist
+✔ Exported bundle(s)
+- Uploading...
+- Uploading assetmap.json (0 / 16.2 KB)
+✔ Uploaded assetmap.json 
+✔ Uploaded 2 app bundles
+✔ Uploading assets skipped - no new assets found
+ℹ 30 iOS assets, 30 Android assets (maximum: 2000 total per update). Learn more about asset limits: https://expo.fyi/eas-update-asset-limits
+- Publishing...
+✔ Published!
