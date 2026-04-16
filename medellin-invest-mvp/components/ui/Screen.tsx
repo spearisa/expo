@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import {
   KeyboardAvoidingView,
   Platform,
+  RefreshControlProps,
   ScrollView,
   StyleSheet,
   View,
@@ -18,7 +19,7 @@ type Props = {
   edges?: Edge[];
   contentContainerStyle?: ViewStyle;
   keyboardAvoiding?: boolean;
-  refreshControl?: React.ReactElement;
+  refreshControl?: React.ReactElement<RefreshControlProps>;
 };
 
 export function Screen({
