@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v5)
+name: Medellín — Auto Publish to Expo Go (v6 SDK 54)
 
 on:
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
           // Strip placeholder updates.url so eas update:configure sets it fresh
           if (j.expo.updates && typeof j.expo.updates.url === 'string' && j.expo.updates.url.includes('REPLACE_WITH_PROJECT_ID')) delete j.expo.updates;
           // Expo Go only loads updates whose runtime matches the SDK version
-          j.expo.runtimeVersion = 'exposdk:51.0.0';
+          j.expo.runtimeVersion = 'exposdk:54.0.0';
           fs.writeFileSync(p, JSON.stringify(j,null,2)+'\n');
           console.log(JSON.stringify(j.expo,null,2));
           "
@@ -94,7 +94,9 @@ jobs:
             const updateId = first.id || '';
             const projectId = first.projectId || first.updateProjectId || '';
             const slug = 'medellin-invest-mvp';
-            const runtime = first.runtimeVersion || 'exposdk:51.0.0';
+            const runtime = first.runtimeVersion || 'exposdk:54.0.0';
+            const projectIdFromApp = (() => { try { return require('./app.json').expo?.extra?.eas?.projectId || ''; } catch(_){ return ''; } })();
+            const resolvedProjectId = projectId || projectIdFromApp;
             const message = encodeURIComponent(first.message || '');
             const createdAt = first.createdAt ? encodeURIComponent(first.createdAt) : '';
             const channel = 'preview';
@@ -102,9 +104,9 @@ jobs:
               '&updateRuntimeVersion=' + encodeURIComponent(runtime) +
               '&createdAt=' + createdAt +
               '&slug=' + slug +
-              '&projectId=' + projectId +
+              '&projectId=' + resolvedProjectId +
               '&group=' + group;
-            const expGoDeepLink = 'exp://u.expo.dev/' + projectId + '?channel-name=' + channel + '&runtime-version=' + encodeURIComponent(runtime);
+            const expGoDeepLink = 'exp://u.expo.dev/' + resolvedProjectId + '?channel-name=' + channel + '&runtime-version=' + encodeURIComponent(runtime);
             const updateDeepLink = 'exp://u.expo.dev/update/' + updateId;
             const accountProjectUrl = 'https://expo.dev/accounts/appmo/projects/' + slug + '/updates/' + group;
             fs.writeFileSync('/tmp/preview_url.txt', previewUrl);
