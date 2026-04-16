@@ -1,21 +1,31 @@
+import { useEffect } from 'react';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { colors } from '@/theme';
 
+SplashScreen.preventAutoHideAsync().catch(() => {});
+
 export default function RootLayout() {
+  useEffect(() => {
+    SplashScreen.hideAsync().catch(() => {});
+  }, []);
+
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: colors.bg }}>
       <SafeAreaProvider>
         <StatusBar style="dark" />
         <Stack
+          initialRouteName="(tabs)"
           screenOptions={{
             headerShown: false,
             contentStyle: { backgroundColor: colors.bg },
             animation: 'slide_from_right',
           }}
         >
+          <Stack.Screen name="index" options={{ animation: 'none' }} />
           <Stack.Screen name="(tabs)" />
           <Stack.Screen
             name="property/[id]"
