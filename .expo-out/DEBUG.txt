@@ -8,7 +8,7 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "medellininvest",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.medellininvest.mvp"
@@ -77,28 +77,28 @@ Require stack:
 === out.json ===
 [
   {
-    "id": "019d988e-6073-7134-b42c-0836982e2773",
-    "createdAt": "2026-04-16T23:09:20.883Z",
-    "group": "4760d307-d225-4c30-b806-ea7d57cff593",
+    "id": "019d989a-d850-7c0d-9ca9-e6abe85a6e10",
+    "createdAt": "2026-04-16T23:22:58.000Z",
+    "group": "01d8c248-bcc7-4324-9683-d2ea480dc030",
     "branch": "preview",
-    "message": "Expo Go preview 23:07",
+    "message": "Expo Go preview 23:21",
     "runtimeVersion": "exposdk:54.0.0",
     "platform": "android",
-    "manifestPermalink": "https://u.expo.dev/update/019d988e-6073-7134-b42c-0836982e2773",
+    "manifestPermalink": "https://u.expo.dev/update/019d989a-d850-7c0d-9ca9-e6abe85a6e10",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "60d0c75ce5162fd33138b68dae56ef665df62760"
+    "gitCommitHash": "de0246ba068f10d320dce91e00751f03c43933a2"
   },
   {
-    "id": "019d988e-6073-7292-9df5-b689a0a3465e",
-    "createdAt": "2026-04-16T23:09:20.883Z",
-    "group": "4760d307-d225-4c30-b806-ea7d57cff593",
+    "id": "019d989a-d850-7c27-b7f4-fdb29145cae7",
+    "createdAt": "2026-04-16T23:22:58.000Z",
+    "group": "01d8c248-bcc7-4324-9683-d2ea480dc030",
     "branch": "preview",
-    "message": "Expo Go preview 23:07",
+    "message": "Expo Go preview 23:21",
     "runtimeVersion": "exposdk:54.0.0",
     "platform": "ios",
-    "manifestPermalink": "https://u.expo.dev/update/019d988e-6073-7292-9df5-b689a0a3465e",
+    "manifestPermalink": "https://u.expo.dev/update/019d989a-d850-7c27-b7f4-fdb29145cae7",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "60d0c75ce5162fd33138b68dae56ef665df62760"
+    "gitCommitHash": "de0246ba068f10d320dce91e00751f03c43933a2"
   }
 ]
 
@@ -120,55 +120,58 @@ All builds of your app going forward will be eligible to receive updates publish
 - Exporting...
 [expo-cli] --non-interactive is not supported, use $CI=1 instead
 [expo-cli] Starting Metro Bundler
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 17.9% ( 44/181)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 19.8% ( 15/119)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 35.9% (285/506)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.5% (204/404)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 56.1% (529/739)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 32.8% (378/660)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 69.1% (705/878)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.2% (541/742)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 77.4% ( 883/1004)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 67.9% (780/949)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.3% (1073/1099)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.0% (1068/1096)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.7% (1256/1357)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.8% (1217/1302)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.7% (1356/1404)
-[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.8% (1317/1399)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1515/1516)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 18.4% ( 34/175)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 17.4% ( 14/115)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.9% (261/448)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 20.4% (123/272)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 52.1% (449/622)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 38.4% (362/584)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 65.5% (620/766)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 55.8% (555/743)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 68.9% (718/865)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 67.9% (707/858)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.0% (1010/1079)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 80.0% ( 916/1024)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.9% (1173/1259)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.0% (1113/1196)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.9% (1306/1402)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.0% (1257/1359)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.1% (1391/1419)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.0% (1385/1414)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.6% (1505/1516)
 [expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1520/1520)
-[expo-cli] iOS Bundled 34625ms node_modules/expo-router/entry.js (1516 modules)
-[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1515/1516)
+[expo-cli] iOS Bundled 37565ms node_modules/expo-router/entry.js (1516 modules)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.6% (1505/1516)
 [expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1520/1520)
 [expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1520/1520)
-[expo-cli] Android Bundled 38741ms node_modules/expo-router/entry.js (1520 modules)
+[expo-cli] Android Bundled 42189ms node_modules/expo-router/entry.js (1520 modules)
 [expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1520/1520)
 [expo-cli] Creating asset map
 [expo-cli] Static rendering is enabled. Learn more: https://docs.expo.dev/router/reference/static-rendering/
 [expo-cli] Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
 [expo-cli] λ node_modules/expo-router/node/render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 19.1% ( 69/170)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓░░░░░░░░░░░░░░░  7.0% ( 42/207)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 28.0% (156/295)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓░░░░░░░░░░░░░ 24.9% (208/423)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 38.3% (262/443)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓░░░░░░░░ 51.6% (382/532)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 47.0% (353/515)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓░░░░░░░░ 55.8% (468/629)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 53.7% (485/662)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 63.7% (577/723)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 79.3% (707/794)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 82.4% (757/834)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.8% (874/963)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.3% ( 923/1010)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.8% ( 983/1085)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.3% (1042/1143)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 92.9% (1122/1164)
-[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.3% (1142/1176)
-[expo-cli] λ Bundled 34305ms node_modules/expo-router/node/render.js (1294 modules)
-[expo-cli] Web Bundled 35007ms node_modules/expo-router/entry.js (1294 modules)
-[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1294/1294)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 14.8% ( 5/13)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓░░░░░░░░░░░░░░ 15.8% ( 89/241)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 22.1% ( 16/102)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓░░░░░░░░░░░ 37.1% (286/479)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 22.1% (102/258)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓░░░░░░░░ 51.6% (423/589)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.4% (207/413)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 66.2% (528/649)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 41.5% (375/582)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 73.8% (669/779)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 58.1% (529/694)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 79.4% (774/870)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 86.3% (785/845)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.0% (902/978)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 87.7% (873/963)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.0% (1035/1141)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 87.7% ( 984/1097)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.6% (1144/1176)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.8% (1159/1172)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 96.9% (1257/1284)
+[expo-cli] λ Bundled 36159ms node_modules/expo-router/node/render.js (1296 modules)
+[expo-cli] Web Bundled 37236ms node_modules/expo-router/entry.js (1294 modules)
 [expo-cli] › ios bundles (2):
 [expo-cli] _expo/static/js/ios/entry-cf9246c401d9fede1c849e6a07a28a24.hbc (3 MB)
 [expo-cli] _expo/static/js/ios/entry-cf9246c401d9fede1c849e6a07a28a24.hbc.map (8.63 MB)
@@ -178,8 +181,8 @@ All builds of your app going forward will be eligible to receive updates publish
 [expo-cli] _expo/static/js/android/entry-d3afedfd52b3e3bb7eae879e183502cb.hbc.map (8.63 MB)
 [expo-cli] 
 [expo-cli] › web bundles (2):
-[expo-cli] _expo/static/js/web/entry-46e963a3d92880c932deace99592245c.js (2.69 MB)
-[expo-cli] _expo/static/js/web/entry-46e963a3d92880c932deace99592245c.js.map (7.81 MB)
+[expo-cli] _expo/static/js/web/entry-1f13912d7fc04bdcaaf7eed63280772c.js (2.69 MB)
+[expo-cli] _expo/static/js/web/entry-1f13912d7fc04bdcaaf7eed63280772c.js.map (7.81 MB)
 [expo-cli] 
 [expo-cli] › Static routes (20):
 [expo-cli] /map (32.8 kB)
