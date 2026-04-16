@@ -44,7 +44,7 @@ export function FormInput({
         style={[
           styles.field,
           focused && styles.fieldFocused,
-          error && styles.fieldError,
+          !!error && styles.fieldError,
         ]}
       >
         {leftIcon && (
