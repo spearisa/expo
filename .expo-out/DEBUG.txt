@@ -29,11 +29,9 @@
     "experiments": {
       "typedRoutes": true
     },
-    "runtimeVersion": "exposdk:51.0.0",
+    "runtimeVersion": "exposdk:54.0.0",
     "extra": {
-      "router": {
-        "origin": false
-      },
+      "router": {},
       "eas": {
         "projectId": "19b77835-d560-42fb-9661-d26c4a44f808"
       }
@@ -50,142 +48,195 @@
 === conf.log ===
 💡 The following process will configure your project to use EAS Update. These changes only apply to your local project files and you can safely revert them at any time.
 > npx expo install expo-updates
-[expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
+[expo-cli] › Installing 1 SDK 54.0.0 compatible native module using npm
 [expo-cli] > npm install
-[expo-cli] added 9 packages, removed 274 packages, and audited 1226 packages in 6s
-[expo-cli] 160 packages are looking for funding
-[expo-cli]   run `npm fund` for details
-[expo-cli] 18 vulnerabilities (1 low, 17 high)
-[expo-cli] 
-[expo-cli] To address all issues (including breaking changes), run:
-[expo-cli]   npm audit fix --force
-[expo-cli] 
-[expo-cli] Run `npm audit` for details.
-✔ Installed expo-updates
-Cannot find module './getConfig'
-Require stack:
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/node_modules/@expo/config/build/Config.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/node_modules/@expo/config/build/index.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/context/contextUtils/getProjectIdAsync.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/context/DynamicProjectConfigContextField.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/EasCommand.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commands/update/configure.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/module-loader.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/help/index.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/errors/handle.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/errors/index.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/config/config.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/config/index.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/command.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/index.js
-- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/bin/run
+[expo-cli] npm error code ERESOLVE
+[expo-cli] npm error ERESOLVE could not resolve
+[expo-cli] npm error
+[expo-cli] npm error While resolving: @react-native/virtualized-lists@0.81.0
+[expo-cli] npm error Found: @types/react@18.2.79
+[expo-cli] npm error node_modules/@types/react
+[expo-cli] npm error   dev @types/react@"~18.2.79" from the root project
+[expo-cli] npm error   peerOptional @types/react@"*" from @radix-ui/react-compose-refs@1.1.2
+[expo-cli] npm error   node_modules/@radix-ui/react-compose-refs
+[expo-cli] npm error     @radix-ui/react-compose-refs@"1.1.2" from @radix-ui/react-slot@1.2.0
+[expo-cli] npm error     node_modules/@radix-ui/react-slot
+[expo-cli] npm error       @radix-ui/react-slot@"1.2.0" from expo-router@5.0.7
+[expo-cli] npm error       node_modules/expo-router
+[expo-cli] npm error         expo-router@"~5.0.0" from the root project
+[expo-cli] npm error         1 more (@expo/cli)
+[expo-cli] npm error   2 more (@radix-ui/react-slot, zustand)
+[expo-cli] npm error
+[expo-cli] npm error Could not resolve dependency:
+[expo-cli] npm error peerOptional @types/react@"^19.1.0" from @react-native/virtualized-lists@0.81.0
+[expo-cli] npm error node_modules/@react-native/virtualized-lists
+[expo-cli] npm error   @react-native/virtualized-lists@"0.81.0" from the root project
+[expo-cli] npm error   @react-native/virtualized-lists@"0.81.0" from react-native@0.81.0
+[expo-cli] npm error   node_modules/react-native
+[expo-cli] npm error     react-native@"0.81.0" from the root project
+[expo-cli] npm error     28 more (@expo/devtools, @expo/metro-runtime, ...)
+[expo-cli] npm error
+[expo-cli] npm error Conflicting peer dependency: @types/react@19.2.14
+[expo-cli] npm error node_modules/@types/react
+[expo-cli] npm error   peerOptional @types/react@"^19.1.0" from @react-native/virtualized-lists@0.81.0
+[expo-cli] npm error   node_modules/@react-native/virtualized-lists
+[expo-cli] npm error     @react-native/virtualized-lists@"0.81.0" from the root project
+[expo-cli] npm error     @react-native/virtualized-lists@"0.81.0" from react-native@0.81.0
+[expo-cli] npm error     node_modules/react-native
+[expo-cli] npm error       react-native@"0.81.0" from the root project
+[expo-cli] npm error       28 more (@expo/devtools, @expo/metro-runtime, ...)
+[expo-cli] npm error
+[expo-cli] npm error Fix the upstream dependency conflict, or retry
+[expo-cli] npm error this command with --force or --legacy-peer-deps
+[expo-cli] npm error to accept an incorrect (and potentially broken) dependency resolution.
+[expo-cli] npm error
+[expo-cli] npm error
+[expo-cli] npm error For a full report see:
+[expo-cli] npm error /home/runner/.npm/_logs/2026-04-16T21_18_06_054Z-eresolve-report.txt
+[expo-cli] npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-04-16T21_18_06_054Z-debug-0.log
+[expo-cli] Error: npm install exited with non-zero code: 1
+[expo-cli] Error: npm install exited with non-zero code: 1
+[expo-cli]     at ChildProcess.completionListener (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@expo/spawn-async/build/spawnAsync.js:42:23)
+[expo-cli]     at Object.onceWrapper (node:events:639:26)
+[expo-cli]     at ChildProcess.emit (node:events:524:28)
+[expo-cli]     at maybeClose (node:internal/child_process:1104:16)
+[expo-cli]     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+[expo-cli]     ...
+[expo-cli]     at spawnAsync (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@expo/spawn-async/build/spawnAsync.js:7:23)
+[expo-cli]     at NpmPackageManager.runAsync (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@expo/package-manager/build/node/BasePackageManager.js:41:42)
+[expo-cli]     at /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@expo/package-manager/build/node/NpmPackageManager.js:36:20
+[expo-cli]     at /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@expo/package-manager/build/utils/spawn.js:14:34
+/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/expo/bin/cli install expo-updates exited with non-zero code: 1
     Error: update:configure command failed.
 
 === out.json ===
 [
   {
-    "id": "019d9807-4842-7c9e-b0bb-efbb1039e334",
-    "createdAt": "2026-04-16T20:41:47.330Z",
-    "group": "618f7eac-95bf-4b63-9a74-4016b0230575",
+    "id": "019d9829-fe51-777e-9242-512b2a2df540",
+    "createdAt": "2026-04-16T21:19:42.161Z",
+    "group": "dd4ce489-5c15-4885-a404-787622b13baf",
     "branch": "preview",
-    "message": "Expo Go preview 20:40",
-    "runtimeVersion": "exposdk:51.0.0",
+    "message": "Expo Go preview 21:18",
+    "runtimeVersion": "exposdk:54.0.0",
     "platform": "android",
-    "manifestPermalink": "https://u.expo.dev/update/019d9807-4842-7c9e-b0bb-efbb1039e334",
+    "manifestPermalink": "https://u.expo.dev/update/019d9829-fe51-777e-9242-512b2a2df540",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "6092e042627d9e6841f5ddc632250f86369b7b92"
+    "gitCommitHash": "011311852a9a77c7b9a497aa758a65681790e5b2"
   },
   {
-    "id": "019d9807-4842-789e-b0fb-ef31a2210338",
-    "createdAt": "2026-04-16T20:41:47.330Z",
-    "group": "618f7eac-95bf-4b63-9a74-4016b0230575",
+    "id": "019d9829-fe51-733e-9be2-89652206e764",
+    "createdAt": "2026-04-16T21:19:42.161Z",
+    "group": "dd4ce489-5c15-4885-a404-787622b13baf",
     "branch": "preview",
-    "message": "Expo Go preview 20:40",
-    "runtimeVersion": "exposdk:51.0.0",
+    "message": "Expo Go preview 21:18",
+    "runtimeVersion": "exposdk:54.0.0",
     "platform": "ios",
-    "manifestPermalink": "https://u.expo.dev/update/019d9807-4842-789e-b0fb-ef31a2210338",
+    "manifestPermalink": "https://u.expo.dev/update/019d9829-fe51-733e-9be2-89652206e764",
     "isRollBackToEmbedded": false,
-    "gitCommitHash": "6092e042627d9e6841f5ddc632250f86369b7b92"
+    "gitCommitHash": "011311852a9a77c7b9a497aa758a65681790e5b2"
   }
 ]
 
 === err.log ===
-npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
-npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
-npm warn deprecated rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
-npm warn deprecated glob@6.0.4: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-npm warn deprecated @xmldom/xmldom@0.7.13: this version has critical issues, please update to the latest version
-npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
-npm warn deprecated tar@7.5.7: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 ✔ Configured updates.url to "https://u.expo.dev/19b77835-d560-42fb-9661-d26c4a44f808"
 
 All builds of your app going forward will be eligible to receive updates published with EAS Update.
 
 - Exporting...
+[expo-cli] --non-interactive is not supported, use $CI=1 instead
 [expo-cli] Starting Metro Bundler
-[expo-cli] 
-[expo-cli] Android Bundled 28855ms node_modules/expo-router/entry.js (1276 modules)
-[expo-cli] 
-[expo-cli] iOS Bundled 32635ms node_modules/expo-router/entry.js (1278 modules)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 21.5% ( 56/217)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 14.1% (12/32)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 35.9% (254/424)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 18.4% (108/252)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 63.3% (512/663)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 33.5% (333/579)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 68.7% (643/778)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 50.1% (496/701)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 71.9% (793/946)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 65.6% (712/879)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.4% (1035/1071)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 89.2% ( 999/1058)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.8% (1201/1257)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 95.8% (1154/1236)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.2% (1310/1315)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 98.6% (1303/1312)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1334/1334)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1331/1331)
+[expo-cli] iOS Bundled 32474ms node_modules/expo-router/entry.js (1334 modules)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1334/1334)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1331/1331)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1331/1331)
+[expo-cli] Android Bundled 36374ms node_modules/expo-router/entry.js (1331 modules)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 99.9% (1331/1331)
 [expo-cli] Creating asset map
-[expo-cli] Preparing additional debugging files
+[expo-cli] Static rendering is enabled. Learn more: https://docs.expo.dev/router/reference/static-rendering/
+[expo-cli] Web node_modules/expo-router/entry.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+[expo-cli] λ node_modules/expo-router/node/render.js ░░░░░░░░░░░░░░░░  0.0% (0/1)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 20.7% ( 34/157)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓░░░░░░░░░░░░░░░ 11.5% ( 88/259)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓░░░░░░░░░░░░░ 20.7% (121/291)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓░░░░░░░░░░░░ 28.7% (211/410)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 36.2% (279/464)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓░░░░░░░░░░ 40.2% (321/506)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓░░░░░░░░░░ 42.6% (374/582)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.0% (480/630)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 50.9% (453/635)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 62.3% (536/689)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 68.7% (630/760)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓░░░░ 76.0% (687/788)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.2% (817/878)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 87.1% (829/908)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 90.2% ( 957/1018)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.5% ( 948/1021)
+[expo-cli] Web node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 94.3% (1068/1100)
+[expo-cli] λ node_modules/expo-router/node/render.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 91.5% (1063/1118)
+[expo-cli] λ Bundled 33858ms node_modules/expo-router/node/render.js (1143 modules)
+[expo-cli] Web Bundled 34174ms node_modules/expo-router/entry.js (1124 modules)
 [expo-cli] 
+[expo-cli] › ios bundles (2):
+[expo-cli] _expo/static/js/ios/entry-043aa11bd26cda3277f4248292323266.hbc (2.68 MB)
+[expo-cli] _expo/static/js/ios/entry-043aa11bd26cda3277f4248292323266.hbc.map (7.97 MB)
 [expo-cli] 
-[expo-cli] Exporting 34 assets:
+[expo-cli] › android bundles (2):
+[expo-cli] _expo/static/js/android/entry-457d3444ed764943e87a60fa2d5a9671.hbc (2.68 MB)
+[expo-cli] _expo/static/js/android/entry-457d3444ed764943e87a60fa2d5a9671.hbc.map (7.97 MB)
 [expo-cli] 
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (70.3 kB)
+[expo-cli] › web bundles (2):
+[expo-cli] _expo/static/js/web/entry-9da3ad2bea9bbfa21471a5e010c49039.js (2.43 MB)
+[expo-cli] _expo/static/js/web/entry-9da3ad2bea9bbfa21471a5e010c49039.js.map (7.28 MB)
 [expo-cli] 
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66.2 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13.5 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56.2 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf (166 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf (134 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf (33.7 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf (203 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf (209 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf (68 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf (424 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Fontisto.ttf (314 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Foundation.ttf (57 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (443 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf (1.15 MB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialIcons.ttf (357 kB)
+[expo-cli] › Static routes (20):
+[expo-cli] /map (32.2 kB)
+[expo-cli] / (index) (34.1 kB)
+[expo-cli] /explore (33.2 kB)
+[expo-cli] /profile (39.9 kB)
+[expo-cli] /_sitemap (38.1 kB)
+[expo-cli] /favorites (40.3 kB)
+[expo-cli] /+not-found (24.7 kB)
+[expo-cli] /(tabs)/map (32.2 kB)
+[expo-cli] /auth/login (28.8 kB)
+[expo-cli] /auth/signup (28.5 kB)
+[expo-cli] /(tabs) (34.1 kB)
+[expo-cli] /listings/edit (36.6 kB)
+[expo-cli] /property/[id] (24.3 kB)
+[expo-cli] /(tabs)/explore (33.2 kB)
+[expo-cli] /(tabs)/profile (39.9 kB)
+[expo-cli] /dashboard/buyer (26.3 kB)
+[expo-cli] /listings/create (31 kB)
+[expo-cli] /(tabs)/favorites (40.3 kB)
+[expo-cli] /dashboard/broker (26.6 kB)
+[expo-cli] /auth/forgot-password (25.4 kB)
 [expo-cli] 
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Octicons.ttf (49.4 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/SimpleLineIcons.ttf (54.1 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Zocial.ttf (25.8 kB)
-[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon-mask.png (913 B)
-[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon.png (10 variations | 338 B)
-[expo-cli] node_modules/expo-router/assets/error.png (516 B)
-[expo-cli] node_modules/expo-router/assets/file.png (158 B)
-[expo-cli] node_modules/expo-router/assets/forward.png (250 B)
-[expo-cli] node_modules/expo-router/assets/pkg.png (429 B)
-[expo-cli] 
-[expo-cli] Exporting 2 bundles for android:
-[expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc (2.37 MB)
-[expo-cli] _expo/static/js/android/entry-68ee40709ea1112ef11dea4db109da9e.hbc.map (7.13 MB)
-[expo-cli] 
-[expo-cli] 
-[expo-cli] Exporting 2 bundles for ios:
-[expo-cli] 
-[expo-cli] _expo/static/js/ios/entry-f54e5d129d5a71eb4e5cc415e449de22.hbc (2.37 MB)
-[expo-cli] 
-[expo-cli] _expo/static/js/ios/entry-f54e5d129d5a71eb4e5cc415e449de22.hbc.map (7.13 MB)
-[expo-cli] Exporting 3 files:
-[expo-cli] assetmap.json (16.6 kB)
-[expo-cli] debug.html (390 B)
-[expo-cli] metadata.json (3.9 kB)
-[expo-cli] 
-[expo-cli] App exported to: dist
+[expo-cli] Exported: dist
 ✔ Exported bundle(s)
 - Uploading...
-- Uploading assetmap.json (0 / 16.2 KB)
+- Uploading assetmap.json (0 / 21.4 KB)
 ✔ Uploaded assetmap.json 
 ✔ Uploaded 2 app bundles
 ✔ Uploading assets skipped - no new assets found
-ℹ 30 iOS assets, 30 Android assets (maximum: 2000 total per update). Learn more about asset limits: https://expo.fyi/eas-update-asset-limits
+ℹ 45 iOS assets, 45 Android assets (maximum: 2000 total per update). Learn more about asset limits: https://expo.fyi/eas-update-asset-limits
+- Computing project fingerprints
+✔ Computed project fingerprints
 - Publishing...
 ✔ Published!
