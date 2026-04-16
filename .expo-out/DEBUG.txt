@@ -1,0 +1,137 @@
+=== app.json used ===
+{
+  "expo": {
+    "name": "Medellín Invest",
+    "slug": "medellin-invest-mvp",
+    "owner": "appmo",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "medellininvest",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.medellininvest.mvp"
+    },
+    "android": {
+      "package": "com.medellininvest.mvp",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E1B2B"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "19b77835-d560-42fb-9661-d26c4a44f808"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/19b77835-d560-42fb-9661-d26c4a44f808"
+    }
+  }
+}
+
+=== init.log ===
+✔ Project successfully linked (ID: 19b77835-d560-42fb-9661-d26c4a44f808) (modified app.json)
+
+=== update:configure log ===
+💡 The following process will configure your project to use EAS Update. These changes only apply to your local project files and you can safely revert them at any time.
+> npx expo install expo-updates
+[expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
+[expo-cli] > npm install
+[expo-cli] added 9 packages, removed 274 packages, and audited 1226 packages in 6s
+[expo-cli] 160 packages are looking for funding
+[expo-cli]   run `npm fund` for details
+[expo-cli] 18 vulnerabilities (1 low, 17 high)
+[expo-cli] 
+[expo-cli] To address all issues (including breaking changes), run:
+[expo-cli]   npm audit fix --force
+[expo-cli] 
+[expo-cli] Run `npm audit` for details.
+✔ Installed expo-updates
+Cannot find module './getConfig'
+Require stack:
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/node_modules/@expo/config/build/Config.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/node_modules/@expo/config/build/index.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/context/contextUtils/getProjectIdAsync.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/context/DynamicProjectConfigContextField.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commandUtils/EasCommand.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/build/commands/update/configure.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/module-loader.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/help/index.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/errors/handle.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/errors/index.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/config/config.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/config/index.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/command.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/@oclif/core/lib/index.js
+- /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/eas-cli/bin/run
+    Error: update:configure command failed.
+
+=== update stdout (out.json) ===
+
+=== update stderr (err.log) ===
+npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.get@4.4.2: This package is deprecated. Use the optional chaining (?.) operator instead.
+npm warn deprecated rimraf@2.4.5: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@6.0.4: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated @xmldom/xmldom@0.7.13: this version has critical issues, please update to the latest version
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated tar@7.5.7: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+✔ Configured updates.url to "https://u.expo.dev/19b77835-d560-42fb-9661-d26c4a44f808"
+
+All builds of your app going forward will be eligible to receive updates published with EAS Update.
+
+- Exporting...
+[expo-cli] Starting Metro Bundler
+[expo-cli] 
+[expo-cli] iOS Bundling failed 25409ms node_modules/expo-router/entry.js (1247 modules)
+[expo-cli] Error: Unable to resolve module @react-native/virtualized-lists from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native/Libraries/Lists/FlatList.js: @react-native/virtualized-lists could not be found within the project or in these directories:
+[expo-cli]   node_modules
+[expo-cli] [0m [90m 23 |[39m   [33mVirtualizedList[39m[33m,[39m
+[expo-cli]  [90m 24 |[39m   keyExtractor [36mas[39m defaultKeyExtractor[33m,[39m
+[expo-cli] [31m[1m>[22m[39m[90m 25 |[39m } [36mfrom[39m [32m'@react-native/virtualized-lists'[39m[33m;[39m
+[expo-cli]  [90m    |[39m         [31m[1m^[22m[39m
+[expo-cli]  [90m 26 |[39m [36mimport[39m memoizeOne [36mfrom[39m [32m'memoize-one'[39m[33m;[39m
+[expo-cli]  [90m 27 |[39m
+[expo-cli]  [90m 28 |[39m [36mconst[39m [33mView[39m [33m=[39m require([32m'../Components/View/View'[39m)[33m;[39m[0m
+[expo-cli] Error: Unable to resolve module @react-native/virtualized-lists from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native/Libraries/Lists/FlatList.js: @react-native/virtualized-lists could not be found within the project or in these directories:
+[expo-cli]   node_modules
+[expo-cli] [0m [90m 23 |[39m   [33mVirtualizedList[39m[33m,[39m
+[expo-cli]  [90m 24 |[39m   keyExtractor [36mas[39m defaultKeyExtractor[33m,[39m
+[expo-cli] [31m[1m>[22m[39m[90m 25 |[39m } [36mfrom[39m [32m'@react-native/virtualized-lists'[39m[33m;[39m
+[expo-cli]  [90m    |[39m         [31m[1m^[22m[39m
+[expo-cli]  [90m 26 |[39m [36mimport[39m memoizeOne [36mfrom[39m [32m'memoize-one'[39m[33m;[39m
+[expo-cli]  [90m 27 |[39m
+[expo-cli]  [90m 28 |[39m [36mconst[39m [33mView[39m [33m=[39m require([32m'../Components/View/View'[39m)[33m;[39m[0m
+[expo-cli]     at ModuleResolver.resolveDependency (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/node-haste/DependencyGraph/ModuleResolution.js:139:15)
+[expo-cli]     at DependencyGraph.resolveDependency (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/node-haste/DependencyGraph.js:232:43)
+[expo-cli]     at /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/lib/transformHelpers.js:156:21
+[expo-cli]     at resolveDependencies (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:42:25)
+[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:83:30)
+[expo-cli]     at processTicksAndRejections (node:internal/process/task_queues:95:5)
+[expo-cli]     at async Promise.all (index 7)
+[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)
+[expo-cli]     at async Promise.all (index 4)
+[expo-cli]     at visit (/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/metro/src/DeltaBundler/buildSubgraph.js:92:5)
+✖ Export failed
+/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/expo/bin/cli export --output-dir dist --source-maps --dump-assetmap --platform ios --platform android exited with non-zero code: 1
+    Error: update command failed.
