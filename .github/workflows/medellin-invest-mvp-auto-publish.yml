@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v3)
+name: Medellín — Auto Publish to Expo Go (v4)
 
 on:
   workflow_dispatch:
@@ -24,16 +24,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Clean app.json placeholders
+      - name: Patch app.json for Expo Go compatibility
         run: |
           node -e "
           const fs=require('fs');
           const p='app.json';
           const j=JSON.parse(fs.readFileSync(p,'utf8'));
-          // Remove web-only baseUrl (mobile doesn't need it, and it may confuse update bundling)
+          // Remove web-only baseUrl — mobile doesn't need it
           if (j.expo.experiments && j.expo.experiments.baseUrl) delete j.expo.experiments.baseUrl;
-          // Strip placeholder updates.url so eas update:configure can set it fresh
+          // Strip placeholder updates.url so eas update:configure sets it fresh
           if (j.expo.updates && typeof j.expo.updates.url === 'string' && j.expo.updates.url.includes('REPLACE_WITH_PROJECT_ID')) delete j.expo.updates;
+          // Expo Go only loads updates whose runtime matches the SDK version
+          j.expo.runtimeVersion = 'exposdk:51.0.0';
           fs.writeFileSync(p, JSON.stringify(j,null,2)+'\n');
           console.log(JSON.stringify(j.expo,null,2));
           "
@@ -51,49 +53,67 @@ jobs:
         run: |
           echo "EXPO_TOKEN=${T1}${T2}" >> "$GITHUB_ENV"
 
-      - name: Init EAS project
-        id: init
-        run: npx eas-cli init --non-interactive --force 2>&1 | tee /tmp/init.log
-
-      - name: Configure EAS Update
-        id: conf
-        continue-on-error: true
-        run: npx eas-cli update:configure --non-interactive --platform all 2>&1 | tee /tmp/conf.log
-
-      - name: Publish preview update
-        id: publish
+      - name: Init / configure EAS
         continue-on-error: true
         run: |
-          npx eas-cli update --branch preview --message "Auto CI publish" --non-interactive --json > /tmp/out.json 2> /tmp/err.log || true
-          echo "---stdout (out.json)---"
-          cat /tmp/out.json 2>/dev/null || echo "(no out.json)"
-          echo "---stderr (err.log)---"
-          cat /tmp/err.log 2>/dev/null || echo "(no err.log)"
+          npx eas-cli init --non-interactive --force 2>&1 | tee /tmp/init.log
+          npx eas-cli update:configure --non-interactive --platform all 2>&1 | tee /tmp/conf.log
 
-      - name: Extract Expo Go URL
-        id: url
+      - name: Publish update for Expo Go
         continue-on-error: true
         run: |
-          URL=$(node -e "
+          npx eas-cli update --branch preview --message "Expo Go preview $(date -u +%H:%M)" --non-interactive --json > /tmp/out.json 2> /tmp/err.log || true
+          echo "--- STDOUT ---"
+          cat /tmp/out.json 2>/dev/null || true
+          echo "--- STDERR ---"
+          cat /tmp/err.log 2>/dev/null || true
+
+      - name: Build all candidate URLs
+        id: urls
+        run: |
+          node -e "
           try {
             const fs=require('fs');
             const raw=fs.readFileSync('/tmp/out.json','utf8').trim();
-            if(!raw){ console.log(''); process.exit(0); }
-            const d=JSON.parse(raw);
-            const arr=Array.isArray(d)?d:[d];
-            const ios=arr.find(u=>u.platform==='ios');
-            const x=ios||arr[0];
-            console.log(x && (x.manifestPermalink||x.permalink) || '');
-          } catch(e){ console.error(e.message); console.log(''); }
-          ")
-          echo "url=$URL" >> "$GITHUB_OUTPUT"
-          echo "URL: $URL"
+            if(!raw){ console.log('NO_DATA'); process.exit(0); }
+            const arr=JSON.parse(raw);
+            const first = Array.isArray(arr) ? arr[0] : arr;
+            const group = first.group || first.updateGroup || '';
+            const updateId = first.id || '';
+            const projectId = first.projectId || first.updateProjectId || '';
+            const slug = 'medellin-invest-mvp';
+            const runtime = first.runtimeVersion || 'exposdk:51.0.0';
+            const message = encodeURIComponent(first.message || '');
+            const createdAt = first.createdAt ? encodeURIComponent(first.createdAt) : '';
+            const channel = 'preview';
+            const previewUrl = 'https://expo.dev/preview/update?message=' + message +
+              '&updateRuntimeVersion=' + encodeURIComponent(runtime) +
+              '&createdAt=' + createdAt +
+              '&slug=' + slug +
+              '&projectId=' + projectId +
+              '&group=' + group;
+            const expGoDeepLink = 'exp://u.expo.dev/' + projectId + '?channel-name=' + channel + '&runtime-version=' + encodeURIComponent(runtime);
+            const updateDeepLink = 'exp://u.expo.dev/update/' + updateId;
+            const accountProjectUrl = 'https://expo.dev/accounts/appmo/projects/' + slug + '/updates/' + group;
+            fs.writeFileSync('/tmp/preview_url.txt', previewUrl);
+            fs.writeFileSync('/tmp/expgo_channel.txt', expGoDeepLink);
+            fs.writeFileSync('/tmp/expgo_update.txt', updateDeepLink);
+            fs.writeFileSync('/tmp/account_url.txt', accountProjectUrl);
+            console.log('previewUrl:', previewUrl);
+            console.log('expGoChannel:', expGoDeepLink);
+            console.log('expGoUpdate:', updateDeepLink);
+            console.log('accountUrl:', accountProjectUrl);
+          } catch(e) { console.error('URL build failed:', e.message); }
+          "
 
-      - name: Commit result back to repo
+      - name: Commit URLs back to repo
         working-directory: .
         run: |
           mkdir -p .expo-out
-          echo "${{ steps.url.outputs.url }}" > .expo-out/EXPO_GO_URL.txt
+          cp /tmp/preview_url.txt .expo-out/PREVIEW_URL.txt 2>/dev/null || echo "" > .expo-out/PREVIEW_URL.txt
+          cp /tmp/expgo_channel.txt .expo-out/EXPO_GO_CHANNEL_URL.txt 2>/dev/null || echo "" > .expo-out/EXPO_GO_CHANNEL_URL.txt
+          cp /tmp/expgo_update.txt .expo-out/EXPO_GO_UPDATE_URL.txt 2>/dev/null || echo "" > .expo-out/EXPO_GO_UPDATE_URL.txt
+          cp /tmp/account_url.txt .expo-out/EXPO_ACCOUNT_URL.txt 2>/dev/null || echo "" > .expo-out/EXPO_ACCOUNT_URL.txt
           date -u +%Y-%m-%dT%H:%M:%SZ > .expo-out/PUBLISHED_AT.txt
           {
             echo "=== app.json used ==="
@@ -102,17 +122,17 @@ jobs:
             echo "=== init.log ==="
             cat /tmp/init.log 2>/dev/null || true
             echo ""
-            echo "=== update:configure log ==="
+            echo "=== conf.log ==="
             cat /tmp/conf.log 2>/dev/null || true
             echo ""
-            echo "=== update stdout (out.json) ==="
+            echo "=== out.json ==="
             cat /tmp/out.json 2>/dev/null || true
             echo ""
-            echo "=== update stderr (err.log) ==="
+            echo "=== err.log ==="
             cat /tmp/err.log 2>/dev/null || true
           } > .expo-out/DEBUG.txt
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .expo-out/EXPO_GO_URL.txt .expo-out/PUBLISHED_AT.txt .expo-out/DEBUG.txt
-          git commit -m "ci: publish Expo Go URL [skip ci]" || echo "nothing to commit"
+          git add .expo-out/
+          git commit -m "ci: publish preview URLs [skip ci]" || echo "nothing to commit"
           git push
