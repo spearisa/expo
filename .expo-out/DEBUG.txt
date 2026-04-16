@@ -29,11 +29,9 @@
     "experiments": {
       "typedRoutes": true
     },
-    "runtimeVersion": "exposdk:51.0.0",
+    "runtimeVersion": "exposdk:54.0.0",
     "extra": {
-      "router": {
-        "origin": false
-      },
+      "router": {},
       "eas": {
         "projectId": "19b77835-d560-42fb-9661-d26c4a44f808"
       }
@@ -50,17 +48,12 @@
 === conf.log ===
 💡 The following process will configure your project to use EAS Update. These changes only apply to your local project files and you can safely revert them at any time.
 > npx expo install expo-updates
-[expo-cli] › Installing 1 SDK 51.0.0 compatible native module using npm
+[expo-cli] › Installing 1 SDK 54.0.0 compatible native module using npm
 [expo-cli] > npm install
-[expo-cli] added 9 packages, removed 274 packages, and audited 1226 packages in 6s
-[expo-cli] 160 packages are looking for funding
+[expo-cli] added 7 packages, removed 322 packages, and audited 779 packages in 3s
+[expo-cli] 59 packages are looking for funding
 [expo-cli]   run `npm fund` for details
-[expo-cli] 18 vulnerabilities (1 low, 17 high)
-[expo-cli] 
-[expo-cli] To address all issues (including breaking changes), run:
-[expo-cli]   npm audit fix --force
-[expo-cli] 
-[expo-cli] Run `npm audit` for details.
+[expo-cli] found 0 vulnerabilities
 ✔ Installed expo-updates
 Cannot find module './getConfig'
 Require stack:
@@ -82,32 +75,6 @@ Require stack:
     Error: update:configure command failed.
 
 === out.json ===
-[
-  {
-    "id": "019d9834-972a-7ecc-8eb0-b95701d0b142",
-    "createdAt": "2026-04-16T21:31:16.650Z",
-    "group": "5e5416c1-221f-4507-83c7-f8db2361867b",
-    "branch": "preview",
-    "message": "Expo Go preview 21:30",
-    "runtimeVersion": "exposdk:51.0.0",
-    "platform": "android",
-    "manifestPermalink": "https://u.expo.dev/update/019d9834-972a-7ecc-8eb0-b95701d0b142",
-    "isRollBackToEmbedded": false,
-    "gitCommitHash": "08ecd148031a7508f82517c43807c3441c38d256"
-  },
-  {
-    "id": "019d9834-972a-7e48-94e6-f8e90dc2ce1f",
-    "createdAt": "2026-04-16T21:31:16.650Z",
-    "group": "5e5416c1-221f-4507-83c7-f8db2361867b",
-    "branch": "preview",
-    "message": "Expo Go preview 21:30",
-    "runtimeVersion": "exposdk:51.0.0",
-    "platform": "ios",
-    "manifestPermalink": "https://u.expo.dev/update/019d9834-972a-7e48-94e6-f8e90dc2ce1f",
-    "isRollBackToEmbedded": false,
-    "gitCommitHash": "08ecd148031a7508f82517c43807c3441c38d256"
-  }
-]
 
 === err.log ===
 npm warn exec The following package was not found and will be installed: eas-cli@18.7.0
@@ -125,64 +92,74 @@ npm warn deprecated tar@7.5.7: Old versions of tar are not supported, and contai
 All builds of your app going forward will be eligible to receive updates published with EAS Update.
 
 - Exporting...
+[expo-cli] --non-interactive is not supported, use $CI=1 instead
 [expo-cli] Starting Metro Bundler
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 17.9% ( 42/189)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓░░░░░░░░░░░░░░ 14.8% ( 17/125)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓░░░░░░░░░░░ 34.0% (262/449)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓░░░░░░░░░░░░ 25.7% (179/353)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓░░░░░░░░ 50.4% (438/617)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓░░░░░░░░░ 46.6% (413/605)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓░░░░░░ 65.6% (619/764)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓░░░░░░░ 59.1% (579/753)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 71.3% (822/985)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓░░░░░ 70.7% (755/898)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 93.7% (1057/1092)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░ 87.6% ( 979/1046)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.5% (1216/1301)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.6% (1167/1253)
+[expo-cli] iOS node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.5% (1321/1399)
+[expo-cli] Android node_modules/expo-router/entry.js ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░ 97.6% (1299/1395)
+[expo-cli] iOS Bundling failed 29776ms node_modules/expo-router/entry.js (1496 modules)
+[expo-cli] Error: Unable to resolve module semver/functions/satisfies from /home/runner/work/expo/expo/medellin-invest-mvp/node_modules/react-native-reanimated/scripts/validate-worklets-version.js: semver/functions/satisfies could not be found within the project or in these directories:
+[expo-cli]   node_modules
+[expo-cli] [0m [90m 1 |[39m [32m'use strict'[39m[33m;[39m
+[expo-cli]  [90m 2 |[39m
+[expo-cli] [31m[1m>[22m[39m[90m 3 |[39m [36mconst[39m semverSatisfies [33m=[39m require([32m'semver/functions/satisfies'[39m)[33m;[39m
+[expo-cli]  [90m   |[39m                                  [31m[1m^[22m[39m
+[expo-cli]  [90m 4 |[39m [36mconst[39m semverPrerelease [33m=[39m require([32m'semver/functions/prerelease'[39m)[33m;[39m
+[expo-cli]  [90m 5 |[39m [36mconst[39m expectedVersion [33m=[39m require([32m'./worklets-version.json'[39m)[33m;[39m
+[expo-cli]  [90m 6 |[39m [36mconst[39m compatibilityFile [33m=[39m require([32m'../compatibility.json'[39m)[33m;[39m[0m
 [expo-cli] 
-[expo-cli] iOS Bundled 30075ms node_modules/expo-router/entry.js (1278 modules)
-[expo-cli] Android Bundled 33454ms node_modules/expo-router/entry.js (1276 modules)
-[expo-cli] Creating asset map
-[expo-cli] Preparing additional debugging files
+[expo-cli] Import stack:
 [expo-cli] 
+[expo-cli]  node_modules/react-native-reanimated/scripts/validate-worklets-version.js
+[expo-cli]  | import "semver/functions/satisfies"
 [expo-cli] 
-[expo-cli] Exporting 34 assets:
+[expo-cli]  node_modules/react-native-reanimated/src/platform-specific/workletsVersion.ts
+[expo-cli]  | import "react-native-reanimated/scripts/validate-worklets-version"
 [expo-cli] 
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/AntDesign.ttf (70.3 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Entypo.ttf (66.2 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/EvilIcons.ttf (13.5 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Feather.ttf (56.2 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome.ttf (166 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf (134 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf (33.7 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf (203 kB)
+[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/NativeReanimated.ts
+[expo-cli]  | import "../platform-specific/workletsVersion"
 [expo-cli] 
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Brands.ttf (209 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf (68 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf (424 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Fontisto.ttf (314 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Foundation.ttf (57 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (443 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf (1.15 MB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/MaterialIcons.ttf (357 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Octicons.ttf (49.4 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/SimpleLineIcons.ttf (54.1 kB)
-[expo-cli] node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Zocial.ttf (25.8 kB)
-[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon-mask.png (913 B)
-[expo-cli] node_modules/@react-navigation/elements/src/assets/back-icon.png (10 variations | 338 B)
-[expo-cli] node_modules/expo-router/assets/error.png (516 B)
-[expo-cli] node_modules/expo-router/assets/file.png (158 B)
-[expo-cli] node_modules/expo-router/assets/forward.png (250 B)
-[expo-cli] node_modules/expo-router/assets/pkg.png (429 B)
+[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/reanimatedModuleInstance.ts
+[expo-cli]  | import "./NativeReanimated"
 [expo-cli] 
-[expo-cli] Exporting 2 bundles for ios:
-[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc (2.37 MB)
-[expo-cli] _expo/static/js/ios/entry-2f407e8775618640eeefb5baa84302a4.hbc.map (7.13 MB)
+[expo-cli]  node_modules/react-native-reanimated/src/ReanimatedModule/index.ts
+[expo-cli]  | import "./reanimatedModuleInstance"
 [expo-cli] 
+[expo-cli]  node_modules/react-native-reanimated/src/index.ts
+[expo-cli]  | import "./ReanimatedModule"
 [expo-cli] 
-[expo-cli] Exporting 2 bundles for android:
-[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc (2.37 MB)
-[expo-cli] _expo/static/js/android/entry-c39ebd1911e1977ff6454c15faa3bc5a.hbc.map (7.13 MB)
-[expo-cli] Exporting 3 files:
-[expo-cli] assetmap.json (16.6 kB)
-[expo-cli] debug.html (390 B)
-[expo-cli] metadata.json (3.9 kB)
+[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/reanimatedWrapper.ts
+[expo-cli]  | import "react-native-reanimated"
 [expo-cli] 
-[expo-cli] App exported to: dist
+[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/utils.ts
+[expo-cli]  | import "../reanimatedWrapper"
 [expo-cli] 
-✔ Exported bundle(s)
-- Uploading...
-- Uploading assetmap.json (0 / 16.2 KB)
-✔ Uploaded assetmap.json 
-✔ Uploaded 2 app bundles
-✔ Uploading assets skipped - no new assets found
-ℹ 30 iOS assets, 30 Android assets (maximum: 2000 total per update). Learn more about asset limits: https://expo.fyi/eas-update-asset-limits
-- Publishing...
-✔ Published!
+[expo-cli]  node_modules/react-native-gesture-handler/src/handlers/gestures/GestureDetector/index.tsx
+[expo-cli]  | import "./utils"
+[expo-cli] 
+[expo-cli]  node_modules/react-native-gesture-handler/src/components/Text.tsx
+[expo-cli]  | import "../handlers/gestures/GestureDetector"
+[expo-cli] 
+[expo-cli]  node_modules/react-native-gesture-handler/src/index.ts
+[expo-cli]  | import "./components/Text"
+[expo-cli] 
+[expo-cli]  app/_layout.tsx
+[expo-cli]  | import "react-native-gesture-handler"
+[expo-cli] 
+[expo-cli]  app (require.context)
+✖ Export failed
+/home/runner/work/expo/expo/medellin-invest-mvp/node_modules/expo/bin/cli export --output-dir dist --experimental-bundle --non-interactive --dump-sourcemap --dump-assetmap --platform=all exited with non-zero code: 1
+    Error: update command failed.
