@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v7)
+name: Medellín — Auto Publish to Expo Go (v6)
 
 on:
   workflow_dispatch:
@@ -48,8 +48,7 @@ jobs:
         run: npx expo install --check --fix --non-interactive 2>&1 | tee /tmp/expoinstall.log
 
       - name: Install eas-cli
-        continue-on-error: true
-        run: npm install --no-save --no-audit --no-fund --legacy-peer-deps eas-cli@latest
+        run: npm install --no-save --no-audit --no-fund eas-cli@latest
 
       - name: Assemble Expo auth
         env:
@@ -61,8 +60,8 @@ jobs:
       - name: Init / configure EAS
         continue-on-error: true
         run: |
-          npx -y eas-cli@latest init --non-interactive --force 2>&1 | tee /tmp/init.log
-          npx -y eas-cli@latest update:configure --non-interactive --platform all 2>&1 | tee /tmp/conf.log
+          npx eas-cli init --non-interactive --force 2>&1 | tee /tmp/init.log
+          npx eas-cli update:configure --non-interactive --platform all 2>&1 | tee /tmp/conf.log
 
       - name: Set project to PUBLIC visibility
         continue-on-error: true
@@ -79,7 +78,7 @@ jobs:
       - name: Publish update for Expo Go
         continue-on-error: true
         run: |
-          npx -y eas-cli@latest update --branch preview --message "Expo Go preview $(date -u +%H:%M)" --non-interactive --json > /tmp/out.json 2> /tmp/err.log || true
+          npx eas-cli update --branch preview --message "Expo Go preview $(date -u +%H:%M)" --non-interactive --json > /tmp/out.json 2> /tmp/err.log || true
           echo "--- STDOUT ---"
           cat /tmp/out.json 2>/dev/null || true
           echo "--- STDERR ---"
@@ -124,7 +123,6 @@ jobs:
           "
 
       - name: Commit URLs back to repo
-        if: always()
         working-directory: .
         run: |
           mkdir -p .expo-out
