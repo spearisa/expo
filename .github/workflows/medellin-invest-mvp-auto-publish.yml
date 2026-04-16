@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v2)
+name: Medellín — Auto Publish to Expo Go (v3)
 
 on:
   workflow_dispatch:
