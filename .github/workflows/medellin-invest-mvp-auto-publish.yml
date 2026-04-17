@@ -1,4 +1,4 @@
-name: Medellín — Auto Publish to Expo Go (v10 newArch off)
+name: Medellín — Auto Publish to Expo Go (v11 republish)
 
 on:
   workflow_dispatch:
