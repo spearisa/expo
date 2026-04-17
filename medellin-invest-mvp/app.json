@@ -2,12 +2,10 @@
   "expo": {
     "name": "Medellín Invest",
     "slug": "medellin-invest-mvp",
-    "owner": "appmo",
     "version": "0.1.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "medellininvest",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.medellininvest.mvp"
@@ -24,7 +22,7 @@
     },
     "plugins": ["expo-router"],
     "experiments": {
-      "typedRoutes": true
+      "baseUrl": "/gh/spearisa/expo@preview/medellin-invest-mvp/dist"
     }
   }
 }
